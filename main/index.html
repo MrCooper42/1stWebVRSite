@@ -29,12 +29,18 @@
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.blue_grey-deep_orange.min.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script language="javascript" type="text/javascript">
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        }
+    </script>
     <!-- Development Version, Uncompressed with Source Maps -->
     <script src="https://aframe.io/releases/0.3.0/aframe.js"></script>
 </head>
 
 <body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed
+    -header">
         <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
             <div class="mdl-layout__header-row portfolio-logo-row">
                 <span class="mdl-layout__title">
@@ -42,9 +48,9 @@
                     <span class="mdl-layout__title">THE COSMIC WHALE</span>
                 </span>
             </div>
-            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only" >
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a class="mdl-navigation__link is-active" href="index.html" >Portfolio</a>
+                    <a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
                     <a class="mdl-navigation__link" href="blog.html">Blog</a>
                     <a class="mdl-navigation__link" href="about.html">About</a>
                     <a class="mdl-navigation__link" href="contact.html">Contact</a>
@@ -53,42 +59,34 @@
         </header>
         <div class="mdl-layout__drawer mdl-layout--small-screen-only">
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <h4 id="nav-head">Cosmic Whale</h4>
                 <a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
                 <a class="mdl-navigation__link" href="blog.html">Blog</a>
                 <a class="mdl-navigation__link" href="about.html">About</a>
-                <a class="mdl-navigation__link" href="contact.html">Contact</a>
+                <a class="mdl-navigation__link" href="projects.html">Projects</a>
+                <a class="mdl-navigation__link" href="scontact.html">Contact</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
+            <div class="mdl-card__media">
+                <iframe style="height: 500px;" src="scene.html" frameborder="0" scrolling="no" onload="resizeIframe(this)" /></iframe>
+            </div>
             <div class="mdl-grid portfolio-max-width">
                 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Blog template</h2>
+                        <h2 class="mdl-card__title-text">What is the Cosmic Whale?</h2>
                     </div>
                     <div class="mdl-card__media">
-                      <a-scene canvas id="canvas" width="300" height="300">
-                            <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
-                            <a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1"  color="#4CC3D9"></a-box>
-                            <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-                            <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-
-                            <a-sky color="#ECECEC"></a-sky>
-                            <a-entity position="0 0 3.8">
-                              <a-camera></a-camera>
-                            </a-entity>
-                      </a-scene canvas>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <strong>Includes</strong>
-                        <span>Design, UX and Frontend Development, A-frame, WebGL</span>
+                        <strong>What we do:</strong>
+                        <span>Design, Full stack Development, A-frame, WebGL, Unity</span>
                     </div>
                     <div class="mdl-grid portfolio-copy">
                         <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Introduction</h3>
                         <div class="mdl-cell mdl-cell--6-col mdl-card__supporting-text no-padding">
                             <p>
-                                Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet. Voluptate voluptate irure occaecat deserunt incididunt esse in. Sunt velit aliquip sunt elit ex nulla reprehenderit qui ut eiusmod ipsum
-                                do. Duis veniam reprehenderit laborum occaecat id proident nulla veniam. Duis enim deserunt voluptate aute veniam sint pariatur exercitation. Irure mollit est sit labore est deserunt pariatur duis aute laboris cupidatat.
-                                Consectetur consequat esse est sit veniam adipisicing ipsum enim irure.
+                                Humblebrag tumblr gastropub jean shorts, shabby chic mustache stumptown sriracha mlkshk plaid selfies retro keffiyeh kale chips paleo. Cold-pressed echo park four dollar toast swag. Tilde yuccie shabby chic, next level slow-carb keffiyeh selvage. Celiac next level etsy beard, single-origin coffee pork belly affogato salvia. Banjo tumblr before they sold out, aesthetic kitsch roof party mlkshk fanny pack quinoa butcher meggings typewriter whatever small batch tousled. Ethical skateboard squid neutra drinking vinegar lo-fi. Bespoke single-origin coffee typewriter church-key pug, vinyl butcher truffaut flexitarian ugh venmo photo booth shabby chic letterpress master cleanse.
                             </p>
                         </div>
                         <div class="mdl-cell mdl-cell--6-col">
@@ -100,9 +98,7 @@
                         </div>
                         <div class="mdl-cell mdl-cell--6-col mdl-card__supporting-text no-padding ">
                             <p>
-                                Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet. Voluptate voluptate irure occaecat deserunt incididunt esse in. Sunt velit aliquip sunt elit ex nulla reprehenderit qui ut eiusmod ipsum
-                                do. Duis veniam reprehenderit laborum occaecat id proident nulla veniam. Duis enim deserunt voluptate aute veniam sint pariatur exercitation. Irure mollit est sit labore est deserunt pariatur duis aute laboris cupidatat.
-                                Consectetur consequat esse est sit veniam adipisicing ipsum enim irure.
+                                Kickstarter cray 8-bit cred beard. Thundercats fashion axe chillwave direct trade tattooed bicycle rights tilde. Etsy cray kinfolk chambray. Swag chillwave trust fund master cleanse cronut raw denim. Tofu locavore sartorial yr. 8-bit kinfolk swag, put a bird on it kickstarter disrupt banjo YOLO bicycle rights VHS schlitz semiotics celiac plaid. Celiac pour-over viral, shabby chic photo booth slow-carb banh mi tote bag paleo selvage twee next level mixtape butcher hammock.
                             </p>
                         </div>
                         <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Final Concept</h3>
@@ -114,9 +110,7 @@
                         </div>
                         <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
                             <p>
-                                Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet. Voluptate voluptate irure occaecat deserunt incididunt esse in. Sunt velit aliquip sunt elit ex nulla reprehenderit qui ut eiusmod ipsum
-                                do. Duis veniam reprehenderit laborum occaecat id proident nulla veniam. Duis enim deserunt voluptate aute veniam sint pariatur exercitation. Irure mollit est sit labore est deserunt pariatur duis aute laboris cupidatat.
-                                Consectetur consequat esse est sit veniam adipisicing ipsum enim irure.
+                                Banjo put a bird on it mixtape, meggings thundercats 3 wolf moon neutra chillwave shabby chic typewriter. Meditation lo-fi poutine, meggings seitan hella shoreditch shabby chic cornhole iPhone master cleanse godard cliche asymmetrical. Fap poutine gochujang pour-over salvia actually. Green juice ethical scenester letterpress sustainable, vegan tote bag crucifix. Craft beer fixie everyday carry, slow-carb chambray pitchfork offal scenester fap tumblr viral man braid typewriter godard fingerstache. Small batch swag cliche etsy yuccie brooklyn kitsch, retro food truck. Polaroid green juice gochujang, cornhole hashtag whatever listicle organic tilde actually twee sriracha chartreuse.
                             </p>
                         </div>
                     </div>
@@ -124,12 +118,12 @@
             </div>
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
-                    <div class="mdl-logo">Simple portfolio website</div>
+                    <div class="mdl-logo">Cosmic Whale games (logo)</div>
                 </div>
                 <div class="mdl-mini-footer__right-section">
                     <ul class="mdl-mini-footer__link-list">
-                        <li><a href="#">Help</a></li>
-                        <li><a href="#">Privacy / Terms</a></li>
+                        <li><a href="#">Help(link)</a></li>
+                        <li><a href="#">Privacy / Terms (link)</a></li>
                     </ul>
                 </div>
             </footer>
