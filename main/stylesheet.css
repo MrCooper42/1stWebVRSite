@@ -1,7 +1,10 @@
+body {
+  background-color: #301c1c
+}
 
 .portfolio-header {
   position: relative;
-  background-color: #D8D8D8;
+  background-color: #214559;
   background-image: url(images/header-bg.jpg);
 }
 
@@ -32,7 +35,7 @@
 }
 
 .portfolio-header .mdl-layout__drawer-button {
-    background-color: rgba(197, 197, 197, 0.44);
+    background-color: rgba(60, 60, 330, 0.44);
 }
 
 .portfolio-navigation-row .is-active {
@@ -48,7 +51,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: rgb(60,60,60);
+  background-color: rgb(42, 42, 42);
   left: 15%;
 }
 
@@ -59,7 +62,7 @@ img.article-image {
 }
 
 .portfolio-max-width {
-  max-width: 900px;
+  max-width: 100%;
   margin: auto;
 }
 
