@@ -1,0 +1,198 @@
+# Blender MTL File: 'untitled174.blend'
+# Material Count: 17
+
+newmtl dockbluelightmat
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 1.600000 1.600000 1.600000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd dockbluelight.jpg
+map_Ka dockbluelight.jpg
+map_Ke dockbluelight.jpg
+
+newmtl dockgreenlightmat
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 1.600000 1.600000 1.600000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd dockgreenlight.jpg
+map_Ka dockgreenlight.jpg
+map_Ke dockgreenlight.jpg
+
+newmtl dockmainmat
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dockmaintexture2.jpg
+
+newmtl dockmainmat_NONE
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl dockmainmat_dockbrown1.jpg
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dockbrown1.jpg
+
+newmtl dockmainmat_dockbrown2.jpg
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dockbrown2.jpg
+
+newmtl dockmainmat_dockbrown3.jpg
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dockbrown3.jpg
+
+newmtl dockmainmat_dockbrown4.jpg
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dockbrown4.jpg
+
+newmtl dockmainmat_dockmaintexture
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dockmaintexture.jpg
+
+newmtl dockmainmat_dockmaintexture1.jpg
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dockmaintexture1.jpg
+
+newmtl dockmainmat_dockmaintexture3.jpg
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dockmaintexture3.jpg
+
+newmtl dockmainmat_dockname.jpg
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd dockname.jpg
+
+newmtl dockorangemat
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 1.600000 1.600000 1.600000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd dockorange.jpg
+
+newmtl dockorangemat_dockbrown4.jpg
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 1.600000 1.600000 1.600000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd dockbrown4.jpg
+
+newmtl dockredlightmat
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 1.600000 1.600000 1.600000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd dockredlight.jpg
+map_Ka dockredlight.jpg
+map_Ke dockredlight.jpg
+
+newmtl dockwhitemat
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 1.600000 1.600000 1.600000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd dockwhite.jpg
+map_Ka dockwhite.jpg
+map_Ke dockwhite.jpg
+
+newmtl dockwhitemat_dockmaintexture
+Ns 96.078431
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 1.600000 1.600000 1.600000
+Ni 1.000000
+d 1.000000
+illum 0
+map_Kd dockmaintexture.jpg
+map_Ka dockwhite.jpg
+map_Ke dockwhite.jpg

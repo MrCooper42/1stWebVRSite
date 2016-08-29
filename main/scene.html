@@ -6,27 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello, World! • A-Frame</title>
     <meta name="description" content="Hello, World! • A-Frame">
-    <script src="https://aframe.io/releases/0.2.0/aframe.js"></script>
+    <script src="https://aframe.io/releases/0.3.0/aframe.js"></script>
     <script src="https://rawgit.com/bryik/aframe-cubemap-component/master/dist/aframe-cubemap-component.min.js"></script>
 </head>
 
 <body>
-    <a-scene>
-        <a-entity cubemap="folder: images/DeepsSpaceRedWithPlanet/; edgeLength 10">
+    <a-scene fog="type: exponential; density: .0025; near: 1; color:#db7119">
+        <a-assets>
+            <a-asset-item id="ship-obj" src="assets\SpaceShips\drone.obj"></a-asset-item>
+            <a-asset-item id="ship-mtl" src="assets\SpaceShips\drone.mtl"></a-asset-item>
+            <!-- <a-asset-item id="dock-obj" src="assets\SpaceShips\SpaceDock\SpaceDock\spacedock.obj"></a-asset-item>
+            <a-asset-item id="dock-mtl" src="assets\SpaceShips\SpaceDock\SpaceDock\spacedock.mtl"></a-asset-item> -->
+        </a-assets>
+
+        <a-entity light="type: hemisphere; color: #63b0ff; groundColor: #f5e022; intensity: 3"></a-entity>
+
+        <!-- <a-entity cubemap="folder: images/DeepsSpaceRedWithPlanet/; edgeLength 1000"> -->
+
+        <a-entity obj-model="obj: #ship-obj; mtl: #ship-mtl" scale="1 1 1" position="0 0 20"></a-entity>
+        <!-- <a-entity obj-model="obj: #dock-obj; mtl: #dock-mtl" scale="10 10
+             10" position="0 -20 20"></a-entity> -->
+
+        <a-plane rotation="-90 180 0" width="500" height="500" position=" 00 -250 00" src="images/DeepsSpaceRedWithPlanet/negy.jpg"></a-plane>
+        <!--bottom -->
+        <a-plane rotation="0 -90 0" width="500" height="500" position=" 250 00 00" src="images/DeepsSpaceRedWithPlanet/negx.jpg"></a-plane>
+        <!-- right -->
+        <a-plane rotation="0 180 0" width="500" height="500" position=" 00 00 250" src="images/DeepsSpaceRedWithPlanet/posz.jpg"></a-plane>
+        <!-- behind  -->
+        <a-plane rotation="0 90 0" width="500" height="500" position=" -250 00 00" src="images/DeepsSpaceRedWithPlanet/posx.jpg"></a-plane>
+        <!-- left -->
+        <a-plane rotation="90 180 0" width="500" height="500" position=" 00 250 00" src="images/DeepsSpaceRedWithPlanet/posy.jpg"></a-plane>
+        <!-- top -->
+        <a-plane rotation="0 0 0" width="500" height="500" position=" 00 00 -250" src="images/DeepsSpaceRedWithPlanet/negz.jpg"></a-plane>
+        <!-- front -->
 
 
-
-
-            <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
-            <a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1" color="#4CC3D9"></a-box>
-            <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-            <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-            <a-sky color="#ECECEC"></a-sky>
-            <a-entity position="0 0 3.8">
-                <a-camera></a-camera>
-            </a-entity>
+        <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E"></a-sphere>
+        <a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1" color="#4CC3D9"></a-box>
+        <a-cylinder position="1 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+        <a-plane rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-sky color="#ECECEC"></a-sky>
+        <a-entity position="0 0 3.8">
+            <a-camera></a-camera>
+        </a-entity>
         </a-entity>
     </a-scene>
 </body>
 
 </html>
+> >
