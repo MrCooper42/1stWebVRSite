@@ -24,9 +24,9 @@
         <!-- Terrain -->
         <a-grid static-body material="transparent: true; side: back; opacity: .1;"></a-grid>
 
-        <a-box class="cube" dynamic-body position="0 0.25 2.5" width="0.5" height="0.5" depth="0.5" color="rgb(107, 23, 228)"></a-box>
-        <a-box class="cube" dynamic-body position="-1 0.25 2.5" width="0.5" height="0.5" depth="0.5" color="rgb(107, 23, 228)"></a-box>
-        <a-box class="cube" dynamic-body position="1 0.25 2.5" width="0.5" height="0.5" depth="0.5" color="rgb(107, 23, 228)"></a-box>
+        <a-box class="cube" dynamic-body position="0 0.25 1.5" width="0.5" height="0.5" depth="0.5" color="rgb(107, 23, 228)"></a-box>
+        <a-box class="cube" dynamic-body position="-1 0.25 1.5" width="0.5" height="0.5" depth="0.5" color="rgb(107, 23, 228)"></a-box>
+        <a-box class="cube" dynamic-body position="1 0.25 1.5" width="0.5" height="0.5" depth="0.5" color="rgb(107, 23, 228)"></a-box>
 
         <a-plane rotation="-90 180 0" width="500" height="500" position=" 00 -250 00" src="images/DeepsSpaceRedWithPlanet/negy.jpg"></a-plane>
         <!--bottom -->
@@ -42,13 +42,13 @@
         <!-- front -->
 
 
-        <a-sphere position="3 1.25 -1" radius="1.25" color="#EF2D5E" event-set__1="_event: click; material.color: red; scale: 1 2 3" event-set__2="_event: mouseenter; material.color: rgb(96, 204, 21); scale: 1 1 1" event-set__3="_event: mouseleave; material.color: #EF2D5E; scale: 0.5 0.5 0.5">
+        <a-sphere position="5 1.25 -1" radius="1.25" color="#EF2D5E" event-set__1="_event: click; material.color: red; scale: 1 2 3" event-set__2="_event: mouseenter; material.color: rgb(96, 204, 21); scale: 1 1 1" event-set__3="_event: mouseleave; material.color: #EF2D5E; scale: 0.5 0.5 0.5">
         </a-sphere>
-        <a-box position="2 0.5 1" rotation="0 45 0" width="1" height="1" depth="1" src="#lightBrick">
+        <a-box position="4 0.5 1" rotation="0 45 0" width="1" height="1" depth="1" src="#lightBrick">
             <a-animation attribute="rotation" begin="click" repeat "indefinite" to=" 0 360 0"></a-animation>
         </a-box>
-        <a-cylinder position="4 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-        <a-plane position="3 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+        <a-cylinder position="6 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+        <a-plane position="5 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
         <a-sky color="#ECECEC"></a-sky>
         </a-entity>
 
