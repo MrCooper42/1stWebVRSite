@@ -7,20 +7,44 @@
     <title>Hello, World! • A-Frame</title>
     <meta name="description" content="Hello, World! • A-Frame">
     <script src="https://aframe.io/releases/0.3.0/aframe.js"></script>
-    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v2.3.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/2.3.0/nunjucks.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-event-set-component/master/dist/aframe-event-set-component.min.js"></script>
-    <script src="js/aframe-extras.controls.js"></script>
-    <script src="js/aframe-extras.physics.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-layout-component/master/dist/aframe-layout-component.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-template-component/master/dist/aframe-template-component.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script>
+    <!-- support for nunjucks ^^ -->
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v2.3.0/dist/aframe-extras.min.js"></script>
+    <script src="./js/aframe-extras.controls.js"></script>
+    <script src="./js/aframe-extras.physics.js"></script>
 </head>
 
 <body>
+    <script src="js/app.js"></script>
     <a-scene fog="type: exponential; density: .0025; near: 1; color:#db7119" physics="debug: true">
         <a-assets>
+            <img id="enemy-1" crossorigin="" src="assets/enemy/tribase-u1-d0.png">
+            <img id="enemy-2" crossorigin="" src="assets/enemy/tribase-u2-d0.png">
+            <img id="enemy-3" crossorigin="" src="assets/enemy/tribase-u3-d0.png">
+
+            <script id='enemies' type="text/x-nunjucks-tempate">
+                <a-entity layout="type: circle; radius: 5" position="0 0.5 0">
+                    <a-animation attriibue="rotaion" dur="30000" easing="linear" repeat="indefinite" to="0 360 0"></a-animation>
+                    {% for x in range(num) %}
+                    <a-image class="enemy" look-at="[camera]" src="#enemy-3" transparent="true">
+                        <a-animation attribute="opacity" begin="collider-hit" dur="400" ease="linear" from="1" to="0"></a-animation>
+                        <a-animation attribute="scale" begin="collider-hit" dur="400" ease="linear" to="0 0 0"></a-animation>
+                    </a-image>
+                    {% endfor %}
+                </a-entity>
+            </script>
+
+            <a-mixin id="laser" geometry="primative: cylinder; radius .1; translate: 0 -2 0" material="color: rgb(247, 141, 0); metalness: 0.3; opacity: 0.5; roughness: 0.5" rotation="90 0 0" projectile="speed: -0.5" collider="target: .enemy"></a-mixin>
             <a-mixin id="checkpoint"></a-mixin>
             <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
             <img src="images/brickwork-bump-map.jpg" alt="floating brick" id="lightBrick" />
         </a-assets>
 
+        <!-- lighting -->
         <a-entity light="type: hemisphere; color: #f9811f; groundColor: #e6b403; intensity: 1"></a-entity>
 
         <!-- Terrain -->
@@ -34,6 +58,7 @@
         <!-- left -->
         <a-cylinder checkpoint radius="1" height="0.1" position="-6 0 6" color="#39BB82"></a-cylinder>
 
+        <!-- box scene-->
         <a-plane rotation="-90 180 0" width="500" height="500" position=" 00 -250 00" src="images/DeepsSpaceRedWithPlanet/negy.jpg"></a-plane>
         <!--bottom -->
         <a-plane rotation="0 -90 0" width="500" height="500" position=" 250 00 00" src="images/DeepsSpaceRedWithPlanet/negx.jpg"></a-plane>
@@ -47,23 +72,18 @@
         <a-plane rotation="0 0 0" width="500" height="500" position=" 00 00 -250" src="images/DeepsSpaceRedWithPlanet/negz.jpg"></a-plane>
         <!-- front -->
 
-<!--
-        <a-sphere position="5 1.25 -1" radius="1.25" color="#EF2D5E" event-set__1="_event: click; material.color: red; scale: 1 2 3" event-set__2="_event: mouseenter; material.color: rgb(96, 204, 21); scale: 1 1 1" event-set__3="_event: mouseleave; material.color: #EF2D5E; scale: 0.5 0.5 0.5">
-        </a-sphere>
-        <a-box position="4 0.5 1" rotation="0 45 0" width="1" height="1" depth="1" src="#lightBrick">
-            <a-animation attribute="rotation" begin="click" repeat "indefinite" to=" 0 360 0"></a-animation>
-        </a-box>
-        <a-cylinder position="6 0.75 1" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-        <a-plane position="5 0 0" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-        <a-sky color="#ECECEC"></a-sky>
-        </a-entity> -->
+        <!-- enemy 3 -->
+        <a-entity template="src: #enemies" data-num="10">
+            <a/entity>
 
-        <!-- Player -->
-        <a-entity camera universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate" position="0 1.764 0">
-            <a-entity cursor="maxDistance: 30" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #CCC; shader: flat;">
-            </a-entity>
-        </a-entity>
+                <!-- Player add spawner and listener to player -->
+                <a-entity id="player" camera universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate" position="0 1.764 0" spawner="mixin: laser; on: click" click-listener>
+                    <a-entity cursor="maxDistance: 30" position="0 0 -2" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #00f928; shader: flat;">
+                    </a-entity>
+                </a-entity>
     </a-scene>
 </body>
 
 </html>
+
+<!-- you might need these to work with nunjucks -->
