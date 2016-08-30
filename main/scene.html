@@ -3,12 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <script src="https://aframe.io/releases/0.3.0/aframe.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello, World! • A-Frame</title>
     <meta name="description" content="Hello, World! • A-Frame">
+    <script src="https://aframe.io/releases/0.3.0/aframe.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v2.3.0/dist/aframe-extras.min.js"></script>
-    <script src="https://rawgit.com/bryik/aframe-cubemap-component/master/dist/aframe-cubemap-component.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-event-set-component/master/dist/aframe-event-set-component.min.js"></script>
 </head>
 
@@ -44,9 +43,7 @@
         <!-- front -->
 
 
-        <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E" event-set__1="_event: click; material.color: red; scale: 1 2 3"
-        event-set__2="_event: mouseenter; material.color: rgb(96, 204, 21); scale: 1 1 1"
-        event-set__3="_event: mouseleave; material.color: #EF2D5E; scale: 0.5 0.5 0.5">
+        <a-sphere position="0 1.25 -1" radius="1.25" color="#EF2D5E" event-set__1="_event: click; material.color: red; scale: 1 2 3" event-set__2="_event: mouseenter; material.color: rgb(96, 204, 21); scale: 1 1 1" event-set__3="_event: mouseleave; material.color: #EF2D5E; scale: 0.5 0.5 0.5">
         </a-sphere>
         <a-box position="-1 0.5 1" rotation="0 45 0" width="1" height="1" depth="1" src="#lightBrick">
             <a-animation attribute="rotation" begin="click" repeat "indefinite" to=" 0 360 0"></a-animation>
