@@ -8,18 +8,18 @@
     <meta name="description" content="Hello, World! • A-Frame">
     <script src="https://aframe.io/releases/0.3.0/aframe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/2.3.0/nunjucks.min.js"></script>
-    <script src="https://rawgit.com/ngokevin/aframe-event-set-component/master/dist/aframe-event-set-component.min.js"></script>
-    <script src="https://rawgit.com/ngokevin/aframe-layout-component/master/dist/aframe-layout-component.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-template-component/master/dist/aframe-template-component.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-look-at-component/master/dist/aframe-look-at-component.min.js"></script>
     <!-- support for nunjucks ^^ -->
+    <script src="https://rawgit.com/ngokevin/aframe-layout-component/master/dist/aframe-layout-component.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v2.3.0/dist/aframe-extras.min.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-event-set-component/master/dist/aframe-event-set-component.min.js"></script>
     <script src="./js/aframe-extras.controls.js"></script>
     <script src="./js/aframe-extras.physics.js"></script>
 </head>
 
 <body>
-    <script src="js/app.js"></script>
+  <script src="js/app.js"></script>
     <a-scene fog="type: exponential; density: .0025; near: 1; color:#db7119" physics="debug: true">
         <a-assets>
             <img id="enemy-1" crossorigin="" src="assets/enemy/tribase-u1-d0.png">
@@ -77,7 +77,7 @@
             <a/entity>
 
                 <!-- Player add spawner and listener to player -->
-                <a-entity id="player" camera universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate" position="0 1.764 0" spawner="mixin: laser; on: click" click-listener>
+                <a-entity id="player" camera universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate" position="0 1.764 0" event-set__1=' click; spawner="mixin: laser;" '>
                     <a-entity cursor="maxDistance: 30" position="0 0 -2" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #00f928; shader: flat;">
                     </a-entity>
                 </a-entity>

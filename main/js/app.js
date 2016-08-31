@@ -76,6 +76,7 @@ AFRAME.registerComponent('collider', {
     var el = this.el;
     var sceneEl = el.sceneEl;
     var mesh = el.getObject3D('mesh');
+    console.log("mesh", mesh);
     var object3D = el.object3D;
     var raycaster;
     var vertices = mesh.geometry.vertices;
