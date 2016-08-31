@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello, World! • A-Frame</title>
     <meta name="description" content="Hello, World! • A-Frame">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://aframe.io/releases/0.3.0/aframe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/2.3.0/nunjucks.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-template-component/master/dist/aframe-template-component.min.js"></script>
@@ -15,12 +16,15 @@
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v2.3.0/dist/aframe-extras.min.js"></script>
     <script src="https://rawgit.com/ngokevin/aframe-event-set-component/master/dist/aframe-event-set-component.min.js"></script>
     <script src="./js/aframe-extras.controls.js"></script>
+    <script src="./js/aframe-extras.misc.js"></script>
+    <script src="./js/aframe-extras.math.js"></script>
     <script src="./js/aframe-extras.physics.js"></script>
+    <script src="./js/index.js"></script>
 </head>
 
 <body>
-  <script src="js/app.js"></script>
-    <a-scene fog="type: exponential; density: .0025; near: 1; color:#db7119" physics="debug: true">
+    <a-scene fog="type: exponential; density: .0025; near: 1; color:#db7111">
+
         <a-assets>
             <img id="enemy-1" crossorigin="" src="assets/enemy/tribase-u1-d0.png">
             <img id="enemy-2" crossorigin="" src="assets/enemy/tribase-u2-d0.png">
@@ -28,35 +32,35 @@
 
             <script id='enemies' type="text/x-nunjucks-tempate">
                 <a-entity layout="type: circle; radius: 5" position="0 0.5 0">
-                    <a-animation attriibue="rotaion" dur="30000" easing="linear" repeat="indefinite" to="0 360 0"></a-animation>
+                    <a-animation attriibue="rotation" dur="30000" easing="linear" repeat="indefinite" to="0 360 0"></a-animation>
                     {% for x in range(num) %}
-                    <a-image class="enemy" look-at="[camera]" src="#enemy-3" transparent="true">
-                        <a-animation attribute="opacity" begin="collider-hit" dur="400" ease="linear" from="1" to="0"></a-animation>
-                        <a-animation attribute="scale" begin="collider-hit" dur="400" ease="linear" to="0 0 0"></a-animation>
+                    <a-image class="enemy" src="#enemy-3" transparent="true" look-at="[camera]" />
+                    <a-animation attribute="opacity" begin="collider-hit" dur="400" ease="linear" from="1" to="0"></a-animation>
+                    <a-animation attribute="scale" begin="collider-hit" dur="400" ease="linear" to="0 0 0"></a-animation>
                     </a-image>
                     {% endfor %}
                 </a-entity>
             </script>
 
-            <a-mixin id="laser" geometry="primative: cylinder; radius .1; translate: 0 -2 0" material="color: rgb(247, 141, 0); metalness: 0.3; opacity: 0.5; roughness: 0.5" rotation="90 0 0" projectile="speed: -0.5" collider="target: .enemy"></a-mixin>
-            <a-mixin id="checkpoint"></a-mixin>
-            <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
+            <a-mixin id="laser" geometry="primitive: cone; radiusBottom: .4; radiusTop: 0.1;" position="0 0 -1" material="color: rgb(247, 141, 0); opacity: 0.5; roughness: 0.5" rotation="-90 0 0" projectile collider="target: .enemy"> </a-mixin>
+            <!-- <a-mixin id="checkpoint"> </a-mixin>
+            <a-mixin id="checkpoint-hovered" color="#6CEEB5"> </a-mixin> -->
             <img src="images/brickwork-bump-map.jpg" alt="floating brick" id="lightBrick" />
         </a-assets>
 
         <!-- lighting -->
-        <a-entity light="type: hemisphere; color: #f9811f; groundColor: #e6b403; intensity: 1"></a-entity>
+        <a-entity light="type: hemisphere; color: #f9811f; groundColor: #e6b403; intensity: 1"> </a-entity>
 
         <!-- Terrain -->
         <a-grid static-body material="transparent: true; side: back; opacity: .1;"></a-grid>
 
         <!-- Checkpoints -->
         <!-- front -->
-        <a-cylinder checkpoint radius="1" height="0.1" position="-1 0 -8" color="#39BB82"></a-cylinder>
+        <!-- <a-cylinder checkpoint radius="1" height="0.1" position="-1 0 -8" color="#39BB82"></a-cylinder> -->
         <!-- behind -->
-        <a-cylinder checkpoint radius="1" height="0.1" position="6 0 4" color="#39BB82"></a-cylinder>
+        <!-- <a-cylinder checkpoint radius="1" height="0.1" position="6 0 4" color="#39BB82"></a-cylinder> -->
         <!-- left -->
-        <a-cylinder checkpoint radius="1" height="0.1" position="-6 0 6" color="#39BB82"></a-cylinder>
+        <!-- <a-cylinder checkpoint radius="1" height="0.1" position="-6 0 6" color="#39BB82"></a-cylinder> -->
 
         <!-- box scene-->
         <a-plane rotation="-90 180 0" width="500" height="500" position=" 00 -250 00" src="images/DeepsSpaceRedWithPlanet/negy.jpg"></a-plane>
@@ -71,19 +75,20 @@
         <!-- top -->
         <a-plane rotation="0 0 0" width="500" height="500" position=" 00 00 -250" src="images/DeepsSpaceRedWithPlanet/negz.jpg"></a-plane>
         <!-- front -->
-
+        <!-- Player add spawner and listener to player -->
+        <a-entity id="player" camera universal-controls position="0 1.678 0">
+            <a-entity
+            cursor position="0 0 -2" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;"
+            material="color: #00f928; shader: flat;"
+            spawner="mixin: laser; on: click;"
+            click-listener>
+            </a-entity>
+        </a-entity>
         <!-- enemy 3 -->
         <a-entity template="src: #enemies" data-num="10">
             <a/entity>
-
-                <!-- Player add spawner and listener to player -->
-                <a-entity id="player" camera universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate" position="0 1.764 0" event-set__1=' click; spawner="mixin: laser;" '>
-                    <a-entity cursor="maxDistance: 30" position="0 0 -2" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #00f928; shader: flat;">
-                    </a-entity>
-                </a-entity>
+                <script src="./js/app.js"></script>
     </a-scene>
 </body>
 
 </html>
-
-<!-- you might need these to work with nunjucks -->

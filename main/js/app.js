@@ -1,3 +1,13 @@
+AFRAME.registerComponent('click-listener', {
+  //when window is clicked, emit click event from the entity.
+  init: function() {
+    var el = this.el;
+    window.addEventListener('click', function() {
+      el.emit('click', null, false);
+    });
+  }
+});
+
 AFRAME.registerComponent('spawner', {
   schema: {
     on: {
@@ -40,17 +50,18 @@ AFRAME.registerComponent('spawner', {
   }
 });
 
+AFRAME.registerComponent('projectile', {
+  schema: {
+    speed: {
+      default: -0.4
+    }
+  },
 
-
-AFRAME.registerComponent('click-listener', {
-  //when window is clicked, emit click event from the entity.
-  init: function() {
-    var el = this.el;
-    window.addEventListener('click', function() {
-      el.emit('click', null, false);
-    });
+  tick: function() {
+    this.el.object3D.translateY(this.data.speed);
   }
 });
+
 
 AFRAME.registerComponent('collider', {
   schema: {
@@ -65,6 +76,7 @@ AFRAME.registerComponent('collider', {
     this.targets = [];
     for (var i = 0; i < targetEls.length; i++) {
       this.targets.push(targetEls[i].object3D);
+      console.log("this.targ init arr", this.targets);
     }
     this.el.object3D.updateMatrixWorld();
   },
@@ -76,7 +88,6 @@ AFRAME.registerComponent('collider', {
     var el = this.el;
     var sceneEl = el.sceneEl;
     var mesh = el.getObject3D('mesh');
-    console.log("mesh", mesh);
     var object3D = el.object3D;
     var raycaster;
     var vertices = mesh.geometry.vertices;
@@ -101,3 +112,16 @@ AFRAME.registerComponent('collider', {
     });
   }
 });
+
+
+
+
+
+
+//
+//   use this by doing <a-scene auto-eneter-vr>
+// AFRAME.registerComponent('auto-enter-vr', {
+//   init: function () {
+//     this.el.sceneEl.enterVR();
+//   }
+// });
