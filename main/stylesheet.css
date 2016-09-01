@@ -55,6 +55,15 @@ body{
   left: 15%;
 }
 
+img.cooper{
+  width: 100%;
+  height: auto;
+}
+
+img.roldan{
+  width: 100%;
+  height: auto;
+}
 
 img.article-image {
   width: 100%;
@@ -123,4 +132,8 @@ img.article-image {
 
 .mainCard {
   background-color: rgba(227, 99, 18, 0.5);
+}
+
+.material-icons {
+  color: rgb(235, 99, 0);
 }

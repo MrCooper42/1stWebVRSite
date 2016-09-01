@@ -12,65 +12,69 @@
 <body>
     <a-scene>
         <!-- Player -->
-        <a-entity camera universal-controls kinematic-body jump-ability position="7 2.25 0"></a-entity>
+        <a-entity height="5" position="7 2.25 0" jump-ability="" kinematic-body="" universal-controls="" camera="" rotation="" scale="" visible="" velocity="" gamepad-controls="" keyboard-controls="" touch-controls="" hmd-controls="" mouse-controls=""></a-entity>
 
         <!-- Ground -->
         <!-- <a-grid static-body material="transparent: true; side: back; opacity: .1;"></a-grid> -->
         <!-- box scene-->
-        <a-plane rotation="-90 180 0" width="500" height="500" position=" 00 -250 00" src="images/DeepsSpaceRedWithPlanet/negy.jpg"></a-plane>
+        <a-plane src="images/DeepsSpaceRedWithPlanet/negy.jpg" position=" 00 -250 00" height="500" width="500" rotation="-90 180 0" material="" geometry="" scale="" visible=""></a-plane>
         <!--bottom -->
-        <a-plane rotation="0 -90 0" width="500" height="500" position=" 250 00 00" src="images/DeepsSpaceRedWithPlanet/negx.jpg"></a-plane>
+        <a-plane src="images/DeepsSpaceRedWithPlanet/negx.jpg" position=" 250 00 00" height="500" width="500" rotation="0 -90 0" material="" geometry="" scale="" visible=""></a-plane>
         <!-- right -->
-        <a-plane rotation="0 180 0" width="500" height="500" position=" 00 00 250" src="images/DeepsSpaceRedWithPlanet/posz.jpg"></a-plane>
+        <a-plane src="images/DeepsSpaceRedWithPlanet/posz.jpg" position=" 00 00 250" height="500" width="500" rotation="0 180 0" material="" geometry="" scale="" visible=""></a-plane>
         <!-- behind  -->
-        <a-plane rotation="0 90 0" width="500" height="500" position=" -250 00 00" src="images/DeepsSpaceRedWithPlanet/posx.jpg"></a-plane>
+        <a-plane src="images/DeepsSpaceRedWithPlanet/posx.jpg" position=" -250 00 00" height="500" width="500" rotation="0 90 0" material="" geometry="" scale="" visible=""></a-plane>
         <!-- left -->
-        <a-plane rotation="90 180 0" width="500" height="500" position=" 00 250 00" src="images/DeepsSpaceRedWithPlanet/posy.jpg"></a-plane>
+        <a-plane src="images/DeepsSpaceRedWithPlanet/posy.jpg" position=" 00 250 00" height="500" width="500" rotation="90 180 0" material="" geometry="" scale="" visible=""></a-plane>
         <!-- top -->
-        <a-plane rotation="0 0 0" width="500" height="500" position=" 00 00 -250" src="images/DeepsSpaceRedWithPlanet/negz.jpg"></a-plane>
+        <a-plane src="images/DeepsSpaceRedWithPlanet/negz.jpg" position=" 00 00 -250" height="500" width="500" rotation="0 0 0" material="" geometry="" scale="" visible=""></a-plane>
         <!-- front -->
 
         <!-- Towers -->
-        <a-box id="tower" color="#39BB82" width="10" height="5" depth="6" position="0 2.5 -15" static-body></a-box>
+        <a-box static-body="" position="0 2.5 -15" depth="6" height="5" width="10" color="#39BB82" id="tower" material="" geometry="" rotation="" scale="" visible=""></a-box>
 
-        <a-box id="tower" color="#bb3939" width="10" height="5" depth="6" position="22 11 -15" static-body></a-box>
+        <a-box static-body="" position="22 11 -15" depth="6" height="5" width="10" color="#bb3939" id="tower" material="" geometry="" rotation="" scale="" visible=""></a-box>
 
-        <a-box id="tower" color="hsl(113, 67%, 50%)" width="10" height="5" depth="6" position="-5 25 15" static-body></a-box>
+        <a-box static-body="" position="-5 25 15" depth="6" height="5" width="10" color="hsl(113, 67%, 50%)" id="tower" material="" geometry="" rotation="" scale="" visible=""></a-box>
 
         <!-- Ramps -->
-        <a-box id="ramp" color="#39BB82" width="5" height="10" depth="18.86796" position="0 -4.04 -6.33" rotation="30 0 0" static-body></a-box>
+        <a-box static-body="" rotation="30 0 0" position="0 -4.04 -6.33" depth="18.86796" height="10" width="5" color="#39BB82" id="ramp" material="" geometry="" scale="" visible=""></a-box>
 
-        <a-box id="ramp" color="#bb3939" width="4" height="4" depth="16" position="10.8 8 -15" rotation="-35 90 0" static-body></a-box>
+        <a-box static-body="" rotation="-35 90 0" position="10.8 8 -15" depth="16" height="4" width="4" color="#bb3939" id="ramp" material="" geometry="" scale="" visible=""></a-box>
 
-        <a-box id="ramp" color="hsl(113, 67%, 50%)" width="3" height="4" depth="6" position="20 11 -5" rotation="0 0 0" static-body></a-box>
+        <a-box static-body="" rotation="0 0 0" position="20 11 -5" depth="6" height="4" width="3" color="hsl(113, 67%, 50%)" id="ramp" material="" geometry="" scale="" visible=""></a-box>
 
-        <a-box id="ramp" color="hsl(113, 67%, 50%)" width="3" height="4" depth="6" position="16 9 1.5" rotation="0 0 0" static-body></a-box>
+        <a-box static-body="" rotation="0 0 0" position="16 9 1.5" depth="6" height="4" width="3" color="hsl(113, 67%, 50%)" id="ramp" material="" geometry="" scale="" visible=""></a-box>
 
         <!-- Moving platforms -->
-        <a-box id="platform1" color="#39BB82" width="5" height="0.25" depth="4" position="7 0.125 0" velocity="0 0 0" toggle-velocity="axis: z; min: -5; max: 5;" static-body></a-box>
+        <a-box static-body="" toggle-velocity="axis: z; min: -5; max: 5;" velocity="0 0 0" position="7 0.125 0" depth="4" height="0.25" width="5" color="#39BB82" id="platform1" material="" geometry="" rotation="" scale="" visible=""></a-box>
 
-        <a-box id="platform2" color="#39BB82" width="5" height="0.25" depth="4" position="-7 0.125 -15" velocity="0 0 0" toggle-velocity="axis: y; min: 0.125; max: 5;" static-body></a-box>
+        <a-box static-body="" toggle-velocity="axis: y; min: 0.125; max: 5;" velocity="0 0 0" position="-7 0.125 -15" depth="4" height="0.25" width="5" color="#39BB82" id="platform2" material="" geometry="" rotation="" scale="" visible=""></a-box>
 
-        <a-box id="platform1.2" color="hsl(113, 67%, 50%)" width="4" height="0.25" depth="3" position="10 7.125 0" velocity="0 0 1" toggle-velocity="axis: z; min: -5; max: 10;" static-body></a-box>
+        <a-box static-body="" toggle-velocity="axis: z; min: -5; max: 10;" velocity="0 0 1" position="10 7.125 0" depth="3" height="0.25" width="4" color="hsl(113, 67%, 50%)" id="platform1.2" material="" geometry="" rotation="" scale="" visible=""></a-box>
 
-        <a-box id="platform2.2" color= "hsl(113, 67%, 50%)" width="3" height="0.25" depth="4" position="20 10 -9" velocity="0 0 1" toggle-velocity="axis: y; min: 8.125; max: 13;" static-body></a-box>
+        <a-box static-body="" toggle-velocity="axis: y; min: 8.125; max: 13;" velocity="0 0 1" position="20 10 -9" depth="4" height="0.25" width="3" color="hsl(113, 67%, 50%)" id="platform2.2" material="" geometry="" rotation="" scale="" visible=""></a-box>
 
-        <a-box static-body="" toggle-velocity="axis:x;min:10;max:20" velocity="1 0 0" position="30.5 7.13 -5" depth="3" height="0.25" width="4" color="hsl(113, 67%, 50%)" id="2-2" material="color:hsl(113, 67%, 50%)" geometry="primitive:box;width:4;height:0.25;depth:3" rotation="0 0 0" scale="1 1 1" visible="true"></a-box>
+        <a-box visible="true" scale="1 1 1" rotation="0 0 0" geometry="primitive:box;width:4;height:0.25;depth:3" material="color:hsl(113, 67%, 50%)" id="2-2" color="hsl(113, 67%, 50%)" width="4" height="0.25" depth="3" position="30.5 7.13 -5" velocity="1 0 0"
+            toggle-velocity="axis:x;min:10;max:20" static-body=""></a-box>
 
-        <a-box static-body="" toggle-velocity="axis:x;min:-10;max:12" velocity="5 0 0" position="12 6 5" depth="3" height="0.25" width="4" color="hsl(113, 67%, 50%)" id="2-2" material="color:hsl(113, 67%, 50%)" geometry="primitive:box;width:4;height:0.25;depth:3" rotation="0 0 0" scale="1 1 1" visible="true"></a-box>
+        <a-box visible="true" scale="1 1 1" rotation="0 0 0" geometry="primitive:box;width:4;height:0.25;depth:3" material="color:hsl(113, 67%, 50%)" id="2-2" color="hsl(113, 67%, 50%)" width="4" height="0.25" depth="3" position="12 6 5" velocity="5 0 0" toggle-velocity="axis:x;min:-10;max:12"
+            static-body=""></a-box>
 
         <!-- Blocks -->
         <!-- <a-box color="#39BB82" width="1" height="1" depth="1" position="15 2 0.6" dynamic-body></a-box>
-        <a-box color="#39BB82" width="1" height="1" depth="1" position="15 2 -0.6" dynamic-body></a-box>
-        <a-box color="#39BB82" width="1" height="1" depth="1" position="15 4 0" dynamic-body></a-box>
-        <a-cylinder color="#39BB82" rotation="90 0 0" position="15 2 4" dynamic-body></a-cylinder>
-        <a-sphere color="#39BB82" position="15 2 -4" dynamic-body></a-sphere> -->
+      <a-box color="#39BB82" width="1" height="1" depth="1" position="15 2 -0.6" dynamic-body></a-box>
+      <a-box color="#39BB82" width="1" height="1" depth="1" position="15 4 0" dynamic-body></a-box>
+      <a-cylinder color="#39BB82" rotation="90 0 0" position="15 2 4" dynamic-body></a-cylinder>
+      <a-sphere color="#39BB82" position="15 2 -4" dynamic-body></a-sphere> -->
 
         <!-- Lighting -->
-        <a-light type="ambient" color="#bbb"></a-light>
-        <a-light color="#ccc" position="0 30 0" distance="100" intensity="0.4" type="point"></a-light>
-        <a-light color="#ccc" position="3 10 -10" distance="50" intensity="0.4" type="point"></a-light>
+        <a-light color="#bbb" type="ambient" light="" position="" rotation="" scale="" visible=""></a-light>
+        <a-light type="point" intensity="0.4" distance="100" position="0 30 0" color="#ccc" light="" rotation="" scale="" visible=""></a-light>
+        <a-light type="point" intensity="0.4" distance="50" position="3 10 -10" color="#ccc" light="" rotation="" scale="" visible=""></a-light>
+        </a-entity>
     </a-scene>
+
 </body>
 
 </html>
