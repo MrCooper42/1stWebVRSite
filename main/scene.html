@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no,maximum-scale=1">
-    <title>Examples • Playground</title>
+    <title>VR LANDED</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://aframe.io/releases/0.3.0/aframe.js"></script>
+    <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
+    <script src="https://rawgit.com/gasolin/aframe-href-component/master/dist/aframe-href-component.min.js"></script>
     <script src="./js/aframe-extras.js"></script>
 </head>
 
@@ -21,11 +24,23 @@
 
         <!-- Checkpoints -->
         <!-- front -->
-        <a-cylinder checkpoint radius="1" height="0.1" position="-1 0 -8" color="#39BB82"></a-cylinder>
+        <a-entity text="text: What's up Wanna PLAY ON the PHONE" height="3" position="-9 3 -11" rotation="0 45 0" color="#fff">
+            <a-box id="phone_link" position="0 0 0" rotation="45 45 45" width="2" depth="2" height="2" color="#F16745" href="./scenePhone.html">
+                <a-box>
+        </a-entity>
+        <a-cylinder checkpoint radius="1" height="0.1" position="-2 0 -8" color="rgba(57, 187, 130, 0.1)">
+        </a-cylinder>
         <!-- behind -->
-        <a-cylinder checkpoint radius="1" height="0.1" position="6 0 4" color="#39BB82"></a-cylinder>
+        <a-entity text="text: What's up Wanna PLAY ON a COMPUTER" height="3" position="13 3 -3" rotation="0 -110 0" color="#fff">
+            <a-box id="comp_link" position="0 0 0" rotation="45 45 45" width="2" depth="2" height="2" color="#F16745" href="./sceneComp.html">
+                <a-box></a-entity>
+        <a-cylinder checkpoint radius="1" height="0.1" position="8 0 2" color="rgba(57, 187, 130, 0.1)" bevelEnabled="true">
+        </a-cylinder>
         <!-- left -->
-        <a-cylinder checkpoint radius="1" height="0.1" position="-6 0 6" color="#39BB82"></a-cylinder>
+        <a-entity text="text: What's up Wanna PLAY IN VIVE" height="3" position="-11 3 9" rotation="0 100 0" color="#fff">
+            <a-box id="vive_link" position="0 0 0" rotation="45 45 45" width="2" depth="2" height="2" color="#F16745" href="./sceneVive.html">
+                <a-box></a-entity>
+        <a-cylinder checkpoint radius="1" height="0.1" position="-8 0 2" color="rgba(57, 187, 130, 0.1)"></a-cylinder>
 
         <!-- box scene-->
         <a-plane rotation="-90 180 0" width="500" height="500" position=" 00 -250 00" src="images/DeepsSpaceRedWithPlanet/negy.jpg"></a-plane>
@@ -41,7 +56,7 @@
         <a-plane rotation="0 0 0" width="500" height="500" position=" 00 00 -250" src="images/DeepsSpaceRedWithPlanet/negz.jpg"></a-plane>
         <!-- front -->
         <!-- Player add spawner and listener to player -->
-        <a-entity id="player" camera universal-controls="movementControls: checkpoint" checkpoint-controls="mode: teleport" position="0 1.678 0">
+        <a-entity id="player" camera universal-controls="movementControls: checkpoint" checkpoint-controls="mode: animate" position="0 1.678 0">
             <a-entity cursor position="0 0 -2" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03;" material="color: #00f928; shader: flat;">
             </a-entity>
         </a-entity>
