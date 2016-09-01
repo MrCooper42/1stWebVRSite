@@ -16,7 +16,8 @@ body{
 }
 
 .portfolio-navigation-row {
-  background-color: rgba(2, 2, 2, 0.2);
+  background-color:rgb(2,2,2);
+  background-color:rgba(2, 2, 2, 0.2);
   text-transform: uppercase;
   height: 45px;
 }
@@ -35,6 +36,7 @@ body{
 }
 
 .portfolio-header .mdl-layout__drawer-button {
+    background-color: rgb(60, 60, 330);
     background-color: rgba(60, 60, 330, 0.44);
 }
 
@@ -50,22 +52,21 @@ body{
   display: block;
   position: absolute;
   bottom: 0;
-  left: 0;
   background-color: rgb(42, 42, 42);
   left: 15%;
 }
 
-img.cooper{
+.cooper{
   width: 100%;
   height: auto;
 }
 
-img.roldan{
+.roldan{
   width: 100%;
   height: auto;
 }
 
-img.article-image {
+.article-image {
   width: 100%;
   height: auto;
 }
@@ -131,6 +132,7 @@ img.article-image {
 }
 
 .mainCard {
+  background-color: rgb(227, 99, 18);
   background-color: rgba(227, 99, 18, 0.5);
 }
 
