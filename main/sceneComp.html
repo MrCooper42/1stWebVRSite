@@ -12,7 +12,7 @@
 <body>
     <a-scene>
         <!-- Player -->
-        <a-entity camera universal-controls kinematic-body jump-ability position="7 1.764 0"></a-entity>
+        <a-entity camera universal-controls kinematic-body jump-ability position="7 2.25 0"></a-entity>
 
         <!-- Ground -->
         <!-- <a-grid static-body material="transparent: true; side: back; opacity: .1;"></a-grid> -->
@@ -32,20 +32,27 @@
 
         <!-- Tower -->
         <a-box id="tower" color="#39BB82" width="10" height="5" depth="6" position="0 2.5 -15" static-body></a-box>
+        <a-box id="tower" color="#bb3939" width="10" height="5" depth="6" position="22 11 -15" static-body></a-box>
+        <a-box id="tower" color="hsl(113, 67%, 50%)" width="10" height="5" depth="6" position="-5 25 15" static-body></a-box>
 
         <!-- Ramp -->
-        <a-box id="ramp" color="#39BB82" width="1" height="10" depth="18.86796" position="0 -4.04 -6.33" rotation="30 0 0" static-body></a-box>
+        <a-box id="ramp" color="#39BB82" width="5" height="10" depth="18.86796" position="0 -4.04 -6.33" rotation="30 0 0" static-body></a-box>
+        <a-box id="ramp" color="#bb3939" width="4" height="4" depth="16" position="10.8 8 -15" rotation="-35 90 0" static-body></a-box>
+        <a-box id="ramp" color="hsl(113, 67%, 50%)" width="3" height="4" depth="6" position="20 11 -5" rotation="0 0 0" static-body></a-box>
+        <a-box id="ramp" color="hsl(113, 67%, 50%)" width="3" height="4" depth="6" position="16 9 1.5" rotation="0 0 0" static-body></a-box>
 
         <!-- Moving platforms -->
-        <a-box id="platform1" color="#39BB82" width="4" height="0.25" depth="4" position="7 0.125 0" velocity="0 0 0" toggle-velocity="axis: z; min: -5; max: 5;" static-body></a-box>
-        <a-box id="platform2" color="#39BB82" width="4" height="0.25" depth="4" position="-7 0.125 -15" velocity="0 0 0" toggle-velocity="axis: y; min: 0.125; max: 5;" static-body></a-box>
+        <a-box id="platform1" color="#39BB82" width="5" height="0.25" depth="4" position="7 0.125 0" velocity="0 0 0" toggle-velocity="axis: z; min: -5; max: 5;" static-body></a-box>
+        <a-box id="platform2" color="#39BB82" width="5" height="0.25" depth="4" position="-7 0.125 -15" velocity="0 0 0" toggle-velocity="axis: y; min: 0.125; max: 5;" static-body></a-box>
+        <a-box id="platform1.2" color="hsl(113, 67%, 50%)" width="3" height="0.25" depth="4" position="10 7.125 0" velocity="0 0 1" toggle-velocity="axis: z; min: -5; max: 10;" static-body></a-box>
+        <a-box id="platform2.2" color="hsl(113, 67%, 50%)" width="3" height="0.25" depth="4" position="20 10 -9" velocity="0 0 1" toggle-velocity="axis: y; min: 8.125; max: 13;" static-body></a-box>
 
         <!-- Blocks -->
-        <a-box color="#39BB82" width="1" height="1" depth="1" position="15 2 0.6" dynamic-body></a-box>
+        <!-- <a-box color="#39BB82" width="1" height="1" depth="1" position="15 2 0.6" dynamic-body></a-box>
         <a-box color="#39BB82" width="1" height="1" depth="1" position="15 2 -0.6" dynamic-body></a-box>
         <a-box color="#39BB82" width="1" height="1" depth="1" position="15 4 0" dynamic-body></a-box>
         <a-cylinder color="#39BB82" rotation="90 0 0" position="15 2 4" dynamic-body></a-cylinder>
-        <a-sphere color="#39BB82" position="15 2 -4" dynamic-body></a-sphere>
+        <a-sphere color="#39BB82" position="15 2 -4" dynamic-body></a-sphere> -->
 
         <!-- Lighting -->
         <a-light type="ambient" color="#bbb"></a-light>
