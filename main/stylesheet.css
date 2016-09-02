@@ -1,25 +1,31 @@
-
-body{
-  font-family: 'Merriweather', serif;
-  letter-spacing: 2px;
-  background-size: contain;
-  background-image: url("./images/cosmic_whale.jpg")
+body {
+    font-family: 'Merriweather', serif;
+    letter-spacing: 2px;
+    background-size: contain;
+    background-image: url("./images/cosmic_whale.jpg")
 }
 
 p {
-  letter-spacing: 2px
+    letter-spacing: 2px
+}
+
+.mdl-layout__title {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(255, 99, 0);
+    text-shadow: 1px 1px 4px #000;
 }
 
 footer {
-  height: 3%;
-  background-color: rgba(12, 92, 136,0.8);
+    height: 3%;
+    background-color: rgb(12, 92, 136);
+    background-color: rgba(12, 92, 136, 0.8);
 }
 
-
-.portfolio-header  {
+.portfolio-header {
     position: relative;
     background-size: contain;
-    background-color: rgba(12, 92, 136,0.8);
+    background-color: rgb(12, 92, 136);
+    background-color: rgba(12, 92, 136, 0.8);
     background-image: url("./images/TCWB.jpg");
 }
 
@@ -39,45 +45,52 @@ footer {
 }
 
 .mdl-card {
-  background-color: rgba(35, 157, 91, 0.48);
+    background-color: rgb(35, 157, 91);
+    background-color: rgba(35, 157, 91, 0.48);
 }
 
 .event {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .aboutRoldan {
-  background-color: rgba(68, 19, 187, 0.57);
+    background-color: rgb(68, 19, 187);
+    background-color: rgba(68, 19, 187, 0.57);
 }
 
 .aboutRoldan p {
-  color: rgba(222, 211, 205, 1);
+    color: rgb(222, 211, 205);
+    color: rgba(222, 211, 205, 1);
 }
 
 .aboutRoldan h3 {
-  color: rgba(240, 2, 2, 0.48);
+    color: rgb(240, 2, 2);
+    color: rgba(240, 2, 2, 0.48);
 }
 
 .aboutCooper {
-  background-color: rgba(233, 79, 22, 0.58);
+    background-color: rgb(233, 79, 22);
+    background-color: rgba(233, 79, 22, 0.58);
 }
 
 .aboutCooper p {
-  color: rgba(42, 8, 62, 1);
+    color: rgb(42, 8, 62);
+    color: rgba(42, 8, 62, 1);
 }
 
 .aboutCooper h1 {
-  color: rgba(4, 86, 139, 0.67);
+    color: rgb(4, 86, 139);
 }
 
 .aboutCooper h3 {
-  color: rgba(4, 86, 139, 0.67);
+    color: rgb(4, 86, 139);
+    color: rgba(4, 86, 139, 0.67);
 }
 
-.portfolio-navigation-row  .mdl-navigation {
-  text-align: center;
-  max-width: 900px;
-  width: 100%;
+.portfolio-navigation-row .mdl-navigation {
+    text-align: center;
+    max-width: 900px;
+    width: 100%;
 }
 
 .portfolio-navigation-row .mdl-navigation__link {
@@ -109,22 +122,23 @@ footer {
 }
 
 .mdl-card__supporting-text {
-  color: rgb(232, 238, 101)
+    color: rgb(232, 238, 101)
 }
 
 .mdl-button {
-  margin-left: 60%;
-  border-radius: 10%;
+    margin-left: 60%;
+    border-radius: 10%;
 }
 
 .portfolio-card .mdl-button {
-  margin-left: 30%;
-  border-radius: 0;
+    margin-left: 30%;
+    border-radius: 0;
 }
 
 .cooper {
     width: 100%;
-    height: auto;;
+    height: auto;
+    ;
 }
 
 .roldan {
@@ -173,7 +187,7 @@ footer {
 }
 
 .card-image__filename span {
-  background-image: url("./images/tall-pic.jpg");
+    background-image: url("./images/tall-pic.jpg");
 }
 
 .demo-card-event>.mdl-card__actions {
@@ -187,33 +201,36 @@ footer {
 }
 
 .mdl-card__title-text {
-  font-family: 'Righteous', cursive;
-  align-content: center;
-  color: rgb(255, 130, 0)
+    font-family: 'Righteous', cursive;
+    align-content: center;
+    color: rgb(255, 130, 0)
 }
 
 .mdl-card__title-text {
-  font-family: 'Righteous', cursive;
-  align-content: center;
-  color: rgb(255, 130, 0)
+    font-family: 'Righteous', cursive;
+    align-content: center;
+    color: rgb(255, 130, 0)
 }
 
 .contactForm {
-  border-radius: 5%;
-  background-color: rgb(255, 255, 255)
+    border-radius: 5%;
+    background-color: rgb(255, 255, 255)
 }
 
-.portfolio-contact > .mdl-card {
+.portfolio-contact>.mdl-card {
+    background-color: rgb(35, 191, 207);
     background-color: rgba(35, 191, 207, 0.49)
 }
 
-.portfolio-contact > .mdl-card {
+.portfolio-contact>.mdl-card {
+    background-color: rgb(35, 191, 207);
     background-color: rgba(35, 191, 207, 0.49)
 }
 
 .portfolio-contact .mdl-textfield {
     width: 100%;
 }
+
 .portfolio-contact p {
     color: rgb(16, 0, 113)
 }
@@ -229,23 +246,23 @@ footer {
 }
 
 .mainCard p {
-  color: rgb(179, 241, 255)
+    color: rgb(179, 241, 255)
 }
 
 .mainCard h3 {
-  color: rgb(0, 192, 236)
+    color: rgb(0, 192, 236)
 }
 
 .mainCard h1 {
-  color: rgb(3, 255, 240)
+    color: rgb(3, 255, 240)
 }
 
 strong {
-  color: rgb(179, 242, 122)
+    color: rgb(179, 242, 122)
 }
 
 .mainCard span {
-  color: rgb(179, 241, 255)
+    color: rgb(179, 241, 255)
 }
 
 .mainCard {
@@ -256,6 +273,7 @@ strong {
 .material-icons {
     color: rgb(235, 99, 0);
 }
+
 
 /*#animate {
 background-image: url("file:./images/TCWB.jpg");
