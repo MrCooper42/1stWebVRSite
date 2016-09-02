@@ -1,5 +1,5 @@
 body{
-  background-color: #5c5c5c
+  background-image:url
 }
 
 .portfolio-header {
@@ -20,6 +20,11 @@ body{
   background-color:rgba(2, 2, 2, 0.2);
   text-transform: uppercase;
   height: 45px;
+}
+
+.mdl-card {
+
+  background-color: transparent;
 }
 
 .portfolio-navigation-row  .mdl-navigation {
