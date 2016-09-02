@@ -1,10 +1,11 @@
-<<<<<<< HEAD
+
 body{
-  background-image:url
-=======
-body {
-    background-color: #5c5c5c
->>>>>>> 286af27b5d0315a6b9b1f0198e2944891c5a50a1
+  background-image: url("file:./images/cosmic_whale.jpg")
+}
+
+footer {
+  position: relative;
+  padding-top: 100%
 }
 
 .portfolio-header {
@@ -27,22 +28,42 @@ body {
     height: 45px;
 }
 
-<<<<<<< HEAD
 .mdl-card {
+  background-color: rgba(35, 157, 91, 0.28);
+}
 
-  background-color: transparent;
+.aboutRoldan {
+  background-color: rgba(68, 19, 187, 0.57);
+}
+
+.aboutRoldan p {
+  color: rgba(222, 211, 205, 1);
+}
+
+.aboutRoldan h3 {
+  color: rgba(240, 2, 2, 0.48);
+}
+
+.aboutCooper {
+  background-color: rgba(233, 79, 22, 0.58);
+}
+
+.aboutCooper p {
+  color: rgba(42, 8, 62, 1);
+}
+
+.aboutCooper h1 {
+  color: rgba(4, 86, 139, 0.67);
+}
+
+.aboutCooper h3 {
+  color: rgba(4, 86, 139, 0.67);
 }
 
 .portfolio-navigation-row  .mdl-navigation {
   text-align: center;
   max-width: 900px;
   width: 100%;
-=======
-.portfolio-navigation-row .mdl-navigation {
-    text-align: center;
-    max-width: 900px;
-    width: 100%;
->>>>>>> 286af27b5d0315a6b9b1f0198e2944891c5a50a1
 }
 
 .portfolio-navigation-row .mdl-navigation__link {
@@ -69,13 +90,20 @@ body {
     display: block;
     position: absolute;
     bottom: 0;
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(37, 21, 21);
     left: 15%;
+}
+
+.mdl-button {
+  margin-left: 60%;
+  margin-bottom: 15%
+  border-radius: 10%;
+  align-items: center;
 }
 
 .cooper {
     width: 100%;
-    height: auto;
+    height: auto;;
 }
 
 .roldan {
@@ -133,8 +161,29 @@ body {
     display: flex;
 }
 
+.mdl-card__title-text {
+  align-content: center;
+  color: rgb(255, 130, 0)
+}
+
+.contactForm {
+  border-radius: 5%;
+  background-color: rgb(255, 255, 255)
+}
+
+.portfolio-contact > .mdl-card {
+    background-color: rgba(35, 191, 207, 0.49)
+}
+
+.portfolio-contact > .mdl-card {
+    background-color: rgba(35, 191, 207, 0.49)
+}
+
 .portfolio-contact .mdl-textfield {
     width: 100%;
+}
+.portfolio-contact p {
+    color: rgb(16, 0, 113)
 }
 
 .portfolio-contact form {
