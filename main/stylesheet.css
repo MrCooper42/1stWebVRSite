@@ -42,6 +42,10 @@ footer {
   background-color: rgba(35, 157, 91, 0.48);
 }
 
+.event {
+  margin-right: 10px;
+}
+
 .aboutRoldan {
   background-color: rgba(68, 19, 187, 0.57);
 }
