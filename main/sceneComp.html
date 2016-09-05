@@ -9,12 +9,15 @@
     </script>
     <script src="https://rawgit.com/ngokevin/aframe-text-component/master/dist/aframe-text-component.min.js"></script>
     <script src="./js/aframe-extras.js"></script>
+    <script src="./js/aframe-extras.physics.js"></script>
+    <script src="./js/aframe-extras.misc.js"></script>
 </head>
 
 <body>
     <a-scene inspector="url: https://aframe.io/releases/0.3.0/aframe-inspector.min.js">
         <!-- Player -->
-        <a-entity height="5" userHeight="1.76" position="7 2.25 0" jump-ability="" kinematic-body="" universal-controls="" camera="" rotation="" scale="" visible="" velocity="" gamepad-controls="" keyboard-controls="" touch-controls="" hmd-controls="" mouse-controls=""></a-entity>
+        <a-entity position="7 1.76 0" jump-ability="" kinematic-body="mass:5; height:1.76; linearDamping:0.01; enableSlopes: false, linear" universal-controls="" camera="" rotation="" scale="" visible="" velocity="" gamepad-controls="" keyboard-controls="" touch-controls=""
+            hmd-controls="" mouse-controls=""></a-entity>
         <!-- Ground -->
         <a-grid static-body material="color: red" position="0 -300 0" scale="5 5 5"></a-grid>
         <a-grid static-body material="color: red" position="0 -310 0" scale="5 5 5"></a-grid>
