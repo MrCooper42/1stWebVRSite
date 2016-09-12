@@ -10,7 +10,7 @@ module.exports = {
     "quotes": "off",
     "prefer-arrow-callback": "off",
     "prefer-template": "off",
-    "max-len": "off"
+    "max-len": "off",
     "no-var": "off"
 
   }
