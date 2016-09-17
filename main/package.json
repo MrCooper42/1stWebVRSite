@@ -1,12 +1,22 @@
 {
-  "name": "main",
-  "version": "1.0.0",
-  "description": "",
+  "name": "the-cosmic-whale",
+  "version": "1.1.1",
+  "description": "cosmic whale games",
   "main": ".eslintrc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "mrcooper",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrCooper42/TheCosmicWhaleSite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MrCooper42/TheCosmicWhaleSite/issues"
+  },
+  "homepage": "https://github.com/MrCooper42/TheCosmicWhaleSite#readme"
 }
